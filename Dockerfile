@@ -7,7 +7,10 @@ LABEL "com.github.actions.maintainer"="Alexander Matheson <awmatheson@github.com
 LABEL "com.github.actions.icon"="message-square"
 LABEL "com.github.actions.color"="black"
 
+USER root
+
 RUN gem install octokit
+USER runner
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
