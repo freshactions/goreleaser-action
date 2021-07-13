@@ -10,6 +10,6 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'samof76/pr-commit'
   args:
     - ${{ inputs.path }}
